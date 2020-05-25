@@ -1,0 +1,77 @@
+#header {
+    display: grid;
+    height: 100px;
+    /*grid-template-columns: 20% 50% 20% 10%;*/
+    /*grid-template-rows: 50% 50%;*/
+    justify-content: center;
+    align-content: center;
+
+    background-color: #5F524F;
+    padding: 20px;
+}
+
+#slogan{
+	color:white;
+	font-size:30px;
+}
+
+nav {
+    border: 1px solid #ccc;
+}
+
+nav ul {
+    /* allow centering to work  */
+    display: table;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline-block;
+    height: 15px;
+    padding: 20px;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 75% auto;/*横の75%を使う。残りは次の要素に渡す*/
+    grid-column-gap: 10px;
+    min-height: 500px;
+}
+
+#main-content, #sidebar {
+    padding: 5px 20px;
+    border: 1px solid;
+}
+
+#sidebar {
+	border-radius: 30px;
+}
+
+#sidebar ul li {
+    padding: 10px 0;
+}
+
+table{
+	border: solid 2px yellow;
+	display: table;
+}
+
+table th{
+	border: solid 2px orange;
+	padding: 5px;
+}
+
+table td{
+	border: solid 1px orange;
+	padding: 5px;
+}
+
+footer {
+    background-color: #5F524F;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: auto 75%;
+    height: 60px;
+    /*grid-template-rows: auto 75%;*/
+}
