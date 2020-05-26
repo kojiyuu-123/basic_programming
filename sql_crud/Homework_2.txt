@@ -1,0 +1,12 @@
+UPDATE
+  agents
+SET COMMISSION=COMMISSION-.02
+WHERE
+  (
+    SELECT
+      MIN(customer.PAYMENT_AMT) 
+    FROM 
+      customer
+    WHERE
+      customer.AGENT_CODE = agents.AGENT_CODE
+)
