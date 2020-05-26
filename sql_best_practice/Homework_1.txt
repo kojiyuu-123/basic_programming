@@ -1,0 +1,16 @@
+/*
+*  Author: PAV
+*  Purpose: Get the number of agents for each group of 'working_area' less than 3
+*/
+SELECT
+  WORKING_AREA AS working_area,
+  AVG(commission) AS average_commission,
+  COUNT(agent_name) AS count_agent_name
+FROM
+  agents
+GROUP BY
+  working_area
+HAVING count_agent_name<3 -- count agents in the same working area by agent name
+ORDER BY
+  average_commission,
+  count_agent_name DESC;
